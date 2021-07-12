@@ -18,4 +18,19 @@ final class ASceneDIContainer {
         self.dependencies = dependencies
     }
 
+    func makeAViewController() -> AViewController {
+        return AViewController.create(with: makeAViewModel())
+    }
+
+    private func makeAViewModel() -> AViewModel {
+        return DefaultAViewModel()
+    }
+
+    func makeAFlowCoordinator(navigationController: UINavigationController) -> AFlowCoordinator {
+        return AFlowCoordinator(navigationController: navigationController,
+                                dependencies: self)
+    }
+
 }
+
+extension ASceneDIContainer: AFlowCoordinatorDependencies {}

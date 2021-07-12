@@ -10,8 +10,8 @@ import Foundation
 final class AppDIContainer {
     lazy var appConfiguration = AppConfiguration()
 
-    // MARK: - Network
-    func makeASceneDIContainer() -> <#return type#> {
-        <#function body#>
+    func makeADIContainer() -> ASceneDIContainer {
+        let dependencies = ASceneDIContainer.Dependencies()
+        return ASceneDIContainer(dependencies: dependencies)
     }
 }

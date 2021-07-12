@@ -7,24 +7,25 @@
 
 import UIKit
 
-protocol ASceneFlowCoordinatorDependencies {
+protocol AFlowCoordinatorDependencies {
     func makeAViewController() -> AViewController
 }
 
-final class ACoordinator {
+final class AFlowCoordinator {
     private weak var navigationControlelr: UINavigationController?
-    private let dependencies: ASceneFlowCoordinatorDependencies
+    private let dependencies: AFlowCoordinatorDependencies
 
-    private weak var AViewController: AViewController?
+    private weak var aViewController: AViewController?
 
     init(navigationController: UINavigationController,
-         dependencies: ASceneFlowCoordinatorDependencies) {
+         dependencies: AFlowCoordinatorDependencies) {
         self.navigationControlelr = navigationController
         self.dependencies = dependencies
     }
 
     func start() {
         let vc = dependencies.makeAViewController()
-
+        navigationControlelr?.pushViewController(vc, animated: false)
+        aViewController = vc
     }
 }

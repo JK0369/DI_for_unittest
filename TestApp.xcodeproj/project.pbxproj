@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0487F85269C6C7E00959D2A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0487F84269C6C7E00959D2A /* Observable.swift */; };
 		E0DFC15C269B4FC7004ABB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DFC15B269B4FC7004ABB5F /* AppDelegate.swift */; };
 		E0DFC165269B4FC8004ABB5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0DFC164269B4FC8004ABB5F /* Assets.xcassets */; };
 		E0DFC168269B4FC8004ABB5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0DFC166269B4FC8004ABB5F /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0487F84269C6C7E00959D2A /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		E0DFC158269B4FC7004ABB5F /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0DFC15B269B4FC7004ABB5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0DFC164269B4FC8004ABB5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0487F83269C6C7600959D2A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E0487F84269C6C7E00959D2A /* Observable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E0DFC14F269B4FC7004ABB5F = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 			children = (
 				E0DFC172269B5056004ABB5F /* Application */,
 				E0FECD97269B56FE009B9A71 /* Presentation */,
+				E0487F83269C6C7600959D2A /* Utils */,
 				E0DFC173269B506F004ABB5F /* Resource */,
 			);
 			path = TestApp;
@@ -237,6 +248,7 @@
 				E0DFC15C269B4FC7004ABB5F /* AppDelegate.swift in Sources */,
 				E0DFC177269B517A004ABB5F /* AppFlowCoordinator.swift in Sources */,
 				E0FECDA5269B57A6009B9A71 /* AViewModel.swift in Sources */,
+				E0487F85269C6C7E00959D2A /* Observable.swift in Sources */,
 				E0FECD9F269B574C009B9A71 /* AFlowCoordinator.swift in Sources */,
 				E0DFC175269B50DB004ABB5F /* AppAppearance.swift in Sources */,
 				E0DFC17E269B5239004ABB5F /* ASceneDIContainer.swift in Sources */,
