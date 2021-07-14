@@ -9,33 +9,36 @@ import Foundation
 
 protocol AInput {
     func viewDidLoad()
-    func didTapCenterButton()
 }
 
 protocol AOutput {
-    var error: Observable<Bool> { get }
-    var item: Observable<String> { get }
+    var calculatedValue: Observable<Int> { get }
 }
 
 protocol AViewModel: AInput, AOutput {}
 
 final class DefaultAViewModel: AViewModel {
 
+    var a: Int
+    var b: Int
+    let addUsecase: AddUsecase
+
     // MARK: - Output
 
-    var error: Observable<Bool> = Observable(false)
-    var item: Observable<String> = Observable("")
+    var calculatedValue: Observable<Int> = Observable(0)
 
+    init(addUsecase: AddUsecase, a: Int, b: Int) {
+        self.addUsecase = addUsecase
+        self.a = a
+        self.b = b
+    }
 }
 
 // MARK: - Input
 
 extension DefaultAViewModel {
     func viewDidLoad() {
-        print("viewDidLoad!!")
-    }
-
-    func didTapCenterButton() {
-        print("didTapCenterButton!!")
+        let resultValue = addUsecase.execute(a: a, b: b)
+        calculatedValue.value = resultValue
     }
 }

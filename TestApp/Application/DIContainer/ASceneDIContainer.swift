@@ -23,7 +23,7 @@ final class ASceneDIContainer {
     }
 
     private func makeAViewModel() -> AViewModel {
-        return DefaultAViewModel()
+        return DefaultAViewModel(addUsecase: DefaultAddUsecase(), a: 3, b: 5)
     }
 
     func makeAFlowCoordinator(navigationController: UINavigationController) -> AFlowCoordinator {
